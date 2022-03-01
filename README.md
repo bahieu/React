@@ -111,3 +111,9 @@
 
 - SPA phụ thuộc hoàn toàn JS
 - MPA có thể không cần JS
+
+
+# Tài liệu tham khảo:
+
+- https://www.sitepoint.com/yarn-vs-npm/
+- https://www.youtube.com/watch?v=30sMCciFIAM&list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q&index=2
