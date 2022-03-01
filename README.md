@@ -60,7 +60,7 @@
 
 ## Cách triển khai
 
-- SPA - Single-Page Application -> Client side rendering
+- SPA - Single-Page Application -> SCR -> Client side rendering
 - MPA - Multi-Page Application -> SSR -> Server side rendering
   
 ## Sự khác biệt
