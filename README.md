@@ -117,3 +117,24 @@
 
 - https://www.sitepoint.com/yarn-vs-npm/
 - https://www.youtube.com/watch?v=30sMCciFIAM&list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q&index=2
+
+---------------------
+
+# React-Dom
+
+- DOM ( Document Object Model) là 1 thư viện giao diện người dùng giống như các phần tử, thuộc tính.
+- Bất cứ khi nào phương thức setState() được gọi, ReactJS reset Dom ảo từ đầu.
+- Việc tách biệt logic liên quan đến việc rendering ra khỏi DOM cho phép React chạy được trên nhiều môi trường khác nhau thay vì chỉ 1 môi trường duy nhất là trình duyệt
+- Sử dụng Virtual DOM cho phép tính toán các thay đổi trên đó và áp dụng đồng thời các thay đổi đó lên Actual DOM khi cần thiết
+- Thao tác DOM thường xuyên rất tốn kém và hiệu suất nặng.
+- Khi thay đổi trạng thái xảy ra, DOM ảo được cập nhật và phiên bản trước đó và phiên bản hiện tại của DOM ảo được so sánh. Điều này được gọi là "diffing".
+- Sau đó, DOM ảo sẽ gửi một bản cập nhật hàng loạt đến DOM thực để cập nhật giao diện người dùng.
+- React sử dụng DOM ảo để nâng cao hiệu suất của nó.
+- Nó sử dụng những gì có thể quan sát được để phát hiện những thay đổi trạng thái và chống đỡ.
+- React sử dụng một thuật toán diffing hiệu quả để so sánh các phiên bản của DOM ảo.
+- Sau đó, nó đảm bảo rằng các bản cập nhật theo đợt được gửi đến DOM thực để sơn lại hoặc kết xuất lại giao diện người dùng.
+
+# Tài liệu tham khảo:
+- https://viblo.asia/p/hieu-sao-ve-virtual-dom-trong-reactjs-bWrZngDblxw
+- https://codestus.com/posts/react-virtual-dom-duoc-hieu-nhu-the-nao#h2-tom-tat-lai
+- https://www.youtube.com/watch?v=zWOREJxiRVY&list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q&index=11
