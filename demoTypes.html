@@ -16,56 +16,78 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="root"></div>
     <script type="text/babel">
+      // Demo types của React.createElement()
+      //   function Header() {
+      //     return <div className="header"> Header </div>;
+      //   }
 
-        // Demo types của React.createElement()
-    //   function Header() {
-    //     return <div className="header"> Header </div>;
-    //   }
+      //   class Content extends React.Component {
+      //     render() {
+      //       return <div className="content"> Content </div>;
+      //     }
+      //   }
 
-    //   class Content extends React.Component {
-    //     render() {
-    //       return <div className="content"> Content </div>;
-    //     }
-    //   }
+      //   function Footer() {
+      //     return <div className="footer"> Footer </div>;
+      //   }
 
-    //   function Footer() {
-    //     return <div className="footer"> Footer </div>;
-    //   }
+      //   const app = (
+      //     <div id="wrapper">
+      //       <Header />
+      //       <Content />
+      //       <Footer />
+      //     </div>
+      //   );
 
-    //   const app = (
-    //     <div id="wrapper">
-    //       <Header />
-    //       <Content />
-    //       <Footer />
-    //     </div>
-    //   );
+      //   ---------------------------------------------------------------------
 
-    //   ---------------------------------------------------------------------
-        function PostList () {
-            return 
-                <div className= 'posts-list'>
-                    <div className='post-item'></div>
-                    <img src='https://files.fullstack.edu.vn/f8-prod/blog_posts/693/6157e3742c6ba.png' alt = 'C#(.NET) - Tương tác với file Excel'>
-                    <h2 className= 'post-title'>C#(.NET) - Tương tác với file Excel</h2>
-                    <p className='post-desc'>Bạn có kiến thức ngôn ngữ JS</p>
-                    <p className='post-published'>1 ngày trước</p>
-                    </div>            
-        }
+      // Postitem.js
+      function Postitem({ 
+        image, 
+        title, 
+        description, 
+        publishedAt, 
+      }) {
+        return (
+          <div className="posts-list">
+            <div className="post-item"></div>
+            <img src={image} alt={title} />
+            <h2 className="post-title">{title}</h2>
+            <p className="post-desc">{description}</p>
+            <p className="post-published">{publishedAt}</p>
+          </div>
+        );
+      }
 
-    const app = (
+      // App.js
+      function App() {
+        return (
+          <div id="wrapper">
+            <Postitem
+              title="1 C#(.NET) - Tương tác với file Excel"
+              image=" https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png "
+              description="1 Bạn có kiến thức ngôn ngữ JS"
+              publishedAt="1 Một ngày trước"
+            />
+            <Postitem
+              title="2 C#(.NET) - Tương tác với file Excel"
+              image=" https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png "
+              description="2 Bạn có kiến thức ngôn ngữ JS"
+              publishedAt="2 Một ngày trước"
+            />
+            <Postitem
+              title="3 C#(.NET) - Tương tác với file Excel"
+              image=" https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png "
+              description="3 Bạn có kiến thức ngôn ngữ JS"
+              publishedAt="3 Một ngày trước"
+            />
+          </div>
+        );
+      }
 
-    <div id="wrapper">
-    <PostList />    
-    <PostList />    
-    <PostList />    
-    </div>
-
-
-    )
-
-      ReactDOM.render(app, document.getElementById("app"));
+      ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
 </html>

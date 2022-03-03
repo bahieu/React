@@ -138,3 +138,37 @@
 - https://viblo.asia/p/hieu-sao-ve-virtual-dom-trong-reactjs-bWrZngDblxw
 - https://codestus.com/posts/react-virtual-dom-duoc-hieu-nhu-the-nao#h2-tom-tat-lai
 - https://www.youtube.com/watch?v=zWOREJxiRVY&list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q&index=11
+
+---------------------
+
+# JSX
+
+- Nó giống như một syntax extension giúp code trở nên mượt và dễ đọc hơn
+- Nó transform cú pháp dạng gần như XML về thành JS, giúp người lập trình có thể code React bằng cú pháp của XML thay vì sử dụng JS.
+- Các XML elements, attributes và children được chuyển đổi thành các đối số truyền vào React.createElement
+
+----------------------------------------------------------
+
+# React.createElement(type,prop,childrens)
+
+## React element types | React components
+
+- React element types: string, function/class
+- Khi sử dụng hàm làm componen thì tên hàm phải viết hoa chữ cái đầu mỗi từ 
+
+## Props
+
+- React elements
+    - Sử dụng props giống như với attribute của thẻ HTML
+- 2 props class, for => className,htmlFor
+- Phải tuân theo quy ước có sẵn
+- React components
+- Sử dụng props giống như đối số cho component
+- Tư do đặt tên props
+    - Đặt theo camelCase
+    - Có thể bao gồm dấu gạch ngang
+- Chú ý:
+    - Prop "key" là prop đặc biệt
+    - Prop cơ bản là đối số của component
+=> Props có thể là bất cứ dữ liệu gì 
+    - Sử dụng destructuring 
